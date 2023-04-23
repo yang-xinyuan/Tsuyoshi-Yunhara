@@ -1,0 +1,8 @@
+docker login
+docker build -t 1046916988/kettle:httpserver -f DockerFile .
+docker push 1046916988/kettle:httpserver
+
+
+docker ps -a |grep httpserver
+docker inspect 5ea17744924f |grep -i pid
+nsenter -t 5188 -n ip a
